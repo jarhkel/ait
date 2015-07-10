@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function counter(){
+if(typeof(Storage)!="undefined"){
+if(localStorage.clickcount){
+localStorage.clickcount=Number(localStorage.clickcount)+1;
+}
+else{
+localStorage.clickcount=1;
+}
+document.getElementById("result").innerHTML=("button clicked "+localStorage.clickcount+"times");
+}
+
+}
+</script>
+</head>
+<body>
+<button id="b1" onclick="counter()" type="button"> Click </button>
+<div id="result" ></div>
+</body>
+</html>

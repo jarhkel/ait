@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>count numbers:<output id="result"></output></p>
+<br>
+<button id="b1" type="button" onclick="start()">start worker</button>
+<br>
+<button id="b2" type="button" onclick="stop()">stop worker</button>
+<script>
+var w;
+function start(){
+if(typeof(Worker)!="undefined"){
+if(typeof(w)==undefined){
+w=new Worker("demo_workers.js");
+}
+w.onmessage=function(event){
+document.getElementById("result").innerHTML=event.data;
+}
+}
+}
+
+function stop(){
+w.terminate();
+w=undefined;
+}
+</script>
+</body>
+</html>

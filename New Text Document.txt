@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+background-color: red;
+}
+@media screen and (max-width: 300px) {
+background-color: lightgreen;
+}
+
+p {
+max-width: 150px;
+max-height: 150px;
+}
+</style>
+</head>
+<body>
+this is awesome
+<br><br>
+<p>this is it</p>
+</body>
+</html>
